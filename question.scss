@@ -1,0 +1,199 @@
+$color-blue: #006aff;
+$box-shadow: 0px 0px 7px 0px #808080;
+* {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  background-color: $color-blue;
+  background-image: url("../assets/5182880.jpg");
+  background-size: 105%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.header {
+  .nav-container {
+    padding: 0 1rem;
+    margin: 0 auto;
+    max-width: 68rem;
+    width: 100%;
+    // position: absolute;
+    background-color: white;
+  }
+
+  .nav-logo {
+    width: fit-content;
+    a {
+      text-decoration: none;
+    }
+  }
+  .nav-menu {
+    max-width: fit-content;
+    position: relative;
+    top: 9px;
+  }
+  .nav-menu__item {
+    width: fit-content;
+
+    li a {
+      text-decoration: none;
+    }
+  }
+}
+.container {
+  width: 75%;
+
+  .quiz {
+    .card {
+      // box-shadow: $box-shadow;
+      background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0)
+      );
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+      .card-body {
+        font-size: large;
+        font-weight: normal;
+        color: white;
+        img {
+          width: 20%;
+        }
+      }
+    }
+    .input {
+      input {
+        // box-shadow: $box-shadow;
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.1),
+          rgba(255, 255, 255, 0)
+        );
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+        color: white;
+        &:focus {
+          box-shadow: 0px 0px 7px 0px $color-blue;
+        }
+        ::placeholder{
+          color: white;
+        }
+      }
+      .buttons {
+        justify-content: center;
+        $btn-width: 200px;
+        $btn-padding: 10px;
+        $bg-color: white;
+        $border-radius: 10px;
+        $btn-border: 0px;
+        .submit {
+          width: $btn-width;
+          button {
+            padding: $btn-padding;
+            background-color: $bg-color;
+            border-radius: $border-radius;
+            box-shadow: $box-shadow;
+            border: $btn-border;
+            background: linear-gradient(
+              135deg,
+              rgba(255, 255, 255, 0.1),
+              rgba(255, 255, 255, 0)
+            );
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+            color: white;
+            &:hover {
+            //   color: $color-blue;
+              box-shadow: 0px 0px 7px 0px $color-blue;
+            }
+          }
+        }
+        .review {
+          width: $btn-width;
+          button {
+            padding: $btn-padding;
+            background-color: $bg-color;
+            border-radius: $border-radius;
+            box-shadow: $box-shadow;
+            border: $btn-border;
+            background: linear-gradient(
+              135deg,
+              rgba(255, 255, 255, 0.1),
+              rgba(255, 255, 255, 0)
+            );
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+            color: white;
+            &:hover {
+            //   color: $color-blue;
+              box-shadow: 0px 0px 7px 0px $color-blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.panel {
+  width: 25%;
+  border-left: 1px solid #888;
+  border-top: 1px solid #888;
+  height: calc(100vh - 76.79px);
+
+  .gradient {
+    background: linear-gradient(
+      to right bottom,
+      rgb(2, 99, 225),
+      rgb(235, 24, 54)
+    );
+    border-radius: 22px;
+    overflow: hidden;
+    margin: 17px;
+    width: 90%;
+  }
+  .clock {
+    background-color: #3f3f3f;
+    border-radius: 20px;
+    display: flex;
+    color: white;
+    margin: 4px;
+    padding: 0px 50px;
+    position: relative;
+    width: calc(100% - 8px);
+  }
+  .status {
+    border-top: 1px solid #888;
+    .block {
+      cursor: pointer;
+      margin: 10px;
+      background-color: grey;
+      width: 50px;
+      height: 50px;
+      font-size: 25px;
+      font-weight: bold;
+      color: white;
+      border-radius: 10px;
+      box-shadow: 2px 2px 6px 0px grey;
+    }
+    .attempted {
+      background-color: green;
+    }
+    .unattempted {
+      background-color: rgb(222, 16, 16);
+    }
+    .review {
+      background-color: purple;
+    }
+  }
+}
