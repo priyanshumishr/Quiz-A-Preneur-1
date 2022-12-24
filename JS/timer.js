@@ -29,7 +29,7 @@ function secFun() {
   document.getElementById("sec").innerHTML = sec;
   document.getElementById("min").innerHTML = min;
   document.getElementById("hour").innerHTML = hour;
-  document.getElementById("_date").innerHTML = _date;
+  // document.getElementById("_date").innerHTML = _date;
 }
 
 setInterval(secFun, 1000);

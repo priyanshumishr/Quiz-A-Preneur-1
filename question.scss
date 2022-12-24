@@ -7,8 +7,8 @@ $box-shadow: 0px 0px 7px 0px #808080;
 }
 .container {
   background-color: $color-blue;
-  background-image: url("../assets/5182880.jpg");
-  background-size: 105%;
+  background-image: url("../assets/4347417.jpg");
+  background-size:cover;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -45,6 +45,83 @@ $box-shadow: 0px 0px 7px 0px #808080;
   width: 75%;
 
   .quiz {
+    .btnPanel{
+      width: 100%;
+      // position: absolute;
+      // left: 50%;
+      .burger{
+        width: 50px;
+        padding: 10px;
+        position: absolute;
+        top: 197px;
+        background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0)
+      );
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+      border-radius: 5px;
+      cursor: pointer;
+        div{
+          background-color: rgba(255,255,255,.815);
+          border-radius: 2px;
+          margin-top: 3px;
+          padding: 2px;
+          height: 2px;
+        }
+      }
+      .visibility{
+        visibility: hidden;
+      }
+    }
+    .score{
+      color: rgba(255, 255, 255, 0.815);
+      font-weight: bolder;
+      font-size: 30px;
+      // position: absolute;
+    }
+    .hint{
+      width: 100%;
+      img{
+        width: 50px;
+        background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0)
+      );
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+      border-radius: 5px;
+      cursor: pointer;
+      }
+    }
+    .timer{
+      width: 100%;
+      margin-bottom: 30px;
+      .card{
+        text-align: center;
+        width: fit-content;
+        padding: 15px;
+        font-size: 20px;
+        color: white;
+        font-weight: bolder;
+        // display: flex;
+        // flex-direction: row;
+        p{
+          margin-bottom: 0;
+        }
+        .time{
+          display: flex;
+          flex-direction: row;
+          font-size: 30px;
+        }
+      }
+    }
     .card {
       // box-shadow: $box-shadow;
       background: linear-gradient(
@@ -60,6 +137,8 @@ $box-shadow: 0px 0px 7px 0px #808080;
         font-size: large;
         font-weight: normal;
         color: white;
+        padding-top: 30px;
+        padding-bottom: 30px;
         img {
           width: 20%;
         }
@@ -81,9 +160,10 @@ $box-shadow: 0px 0px 7px 0px #808080;
         &:focus {
           box-shadow: 0px 0px 7px 0px $color-blue;
         }
-        ::placeholder{
-          color: white;
-        }
+        
+      }
+      input::placeholder{
+        color: rgba(255, 255, 255, 0.826);
       }
       .buttons {
         justify-content: center;
@@ -145,44 +225,23 @@ $box-shadow: 0px 0px 7px 0px #808080;
   }
 }
 
-.panel {
+.panel, .panel-resp{
   width: 25%;
   border-left: 1px solid #888;
   border-top: 1px solid #888;
   height: calc(100vh - 76.79px);
-
-  .gradient {
-    background: linear-gradient(
-      to right bottom,
-      rgb(2, 99, 225),
-      rgb(235, 24, 54)
-    );
-    border-radius: 22px;
-    overflow: hidden;
-    margin: 17px;
-    width: 90%;
-  }
-  .clock {
-    background-color: #3f3f3f;
-    border-radius: 20px;
-    display: flex;
-    color: white;
-    margin: 4px;
-    padding: 0px 50px;
-    position: relative;
-    width: calc(100% - 8px);
-  }
+  // transition: all 0.5s;
   .status {
-    border-top: 1px solid #888;
+    margin-top: 10px;
     .block {
       cursor: pointer;
-      margin: 10px;
-      background-color: grey;
-      width: 50px;
-      height: 50px;
+      margin-inline: auto;
+      background-color: gray;
+      width: 20%;
+      padding: 4%;
       font-size: 25px;
       font-weight: bold;
-      color: white;
+      color: #fff;
       border-radius: 10px;
       box-shadow: 2px 2px 6px 0px grey;
     }
@@ -194,6 +253,131 @@ $box-shadow: 0px 0px 7px 0px #808080;
     }
     .review {
       background-color: purple;
+    }
+  }
+}
+.panel-resp{
+  width: 0px;
+  .status{
+    .block{
+      width: 0px;
+      margin: 0px;
+      visibility: visible;
+      padding: 0px;
+    }
+  }
+}
+.panel-visibility{
+  visibility: hidden;
+}
+
+@media only screen and(max-width: 900px){
+  .px-5{
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+  }
+  .container{
+    .quiz{
+      .score{
+        font-size: 22px;
+      }
+      .hint{
+        img{
+          width: 40px;
+        }
+      }
+      .timer{
+        .card{
+          padding: 8px;
+          font-size: 15px;
+          .time{
+            font-size: 20px;
+          }
+        }
+      }
+      .card{
+        .card-body{
+          padding-top: 20px;
+          padding-bottom: 20px;
+          font-size: medium;
+        }
+      }
+      .input{
+        .buttons{
+          .submit{
+            button{
+              padding: 5px;
+            }
+          }
+          .review{
+            button{
+              padding: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .panel{
+    .status{
+      .block{
+        padding: 0;
+        width: 20%;
+        padding: 1%;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+
+@media only screen and(max-width: 600px){
+  .main{
+    overflow: hidden;
+  }
+  .container{
+    width: 100%;
+    .quiz{
+      .btnPanel{
+        .visibility{
+          visibility: visible;
+        }
+      }
+    }
+  }
+  .panel{
+    width: 0%;
+    visibility: hidden;
+    background-color: white;
+    border-left: 1px solid #888;
+    border-top: 1px solid #888;
+    height: 0;
+    position: absolute;
+    left: 50%;
+  }
+  .panel-resp{
+    // transition: all 1s;
+    width: 50%;
+    width: 0;
+    visibility: hidden;
+    background-color: white;
+    border-left: 1px solid #888;
+    border-top: 1px solid #888;
+    height: calc(100vh - 39.86449999999999px);
+    position: absolute;
+    left: 50%;
+    .status{
+      // visibility: hidden;
+      .block{
+        margin-inline: auto;
+        width: 20%;
+        padding: 0%;
+        color: #fff;
+        border-radius: 10px;
+        box-shadow: 2px 2px 6px 0px grey;
+        // visibility: hidden;
+      }
+
     }
   }
 }

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz-A-Preneur</title>
     <link rel="stylesheet" href="css/home.min.css">
+    <link rel="stylesheet" href="css/countdown.css">
 </head>
 <body>
 
@@ -26,10 +27,29 @@
         </div>
         </nav>
         <div class="hero">
-        <div class="hero-text">
+            
+            <div class="hero-text">
+
+            <!-- Countdown -->
+            <!-- <div id="countdown">
+                <div id='tiles'></div>
+                <div class="labels">
+                  <li>Days</li>
+                  <li>Hours</li>
+                  <li>Mins</li>
+                  <li>Secs</li>
+                </div>
+              </div> -->
+            <!--  -->
+
             <h1 class="hero-text__main">Lorem ipsum dolor sit amet consectetur.</h1>
             <p class="hero-text__subs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ex laborum tempora eaque perspiciatis expedita maxime asperiores corrupti odio perferendis.</p>
-            <a class="hero-text__btn" href="#">Discover Us</a>
+            <a class="hero-text__btn" href="#">
+                <p>
+                    Login with google
+                </p>
+                <img src="./assets/google.png" alt="">
+            </a>
         </div>
         <div class="hero-image">
             <img class="hero-image__main" src="./assets/Artboard 1.png" alt="Images">
@@ -84,30 +104,6 @@
         </div>
         </div>
     </section>
-    <!-- <section class="contact">
-        <div class="container">
-        <div class="contact-image">
-            <img src="https://bit.ly/32Y3o34" alt="Images">
-        </div>
-        <div class="contact-form">
-            <h2 class="contact-title">Contact Us Now.</h2>
-            <form class="form">
-            <div class="form-group group-1">
-                <input type="text" name="name" class="form-input" placeholder="Input Your Name">
-            </div>
-            <div class="form-group group-2">
-                <input type="text" name="email" class="form-input" placeholder="Input Your Email">
-            </div>
-            <div class="form-group group-3">
-                <textarea name="message" rows="5" class="form-textarea" placeholder="Input Your Messages"></textarea>
-            </div>
-            <div class="form-group group-4">
-                <input type="submit" class="form-submit" value="Submit">
-            </div>
-            </form>
-        </div>
-        </div>
-    </section> -->
     </main>
 
     <!-- footer -->
@@ -128,5 +124,6 @@
     </footer>
 
     <script src="./JS/home.js"></script>
+    <script src="./JS/countdown.js"></script>
 </body>
 </html>

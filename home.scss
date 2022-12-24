@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 $color-white: #ffffff;
 $color-light: #fafafa;
 $color-dark: #333333;
@@ -11,6 +13,7 @@ $box-shadow-2: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -101,16 +104,28 @@ body {
       }
 
       &__btn {
-        padding: 1rem 2rem;
-        font-family: inherit;
-        font-size: 1.2rem;
-        font-weight: 500;
-        text-align: center;
-        color: $color-white;
-        background: $color-blue;
-        border: none;
-        outline: none;
-        border-radius: 2px;
+        padding-left: 0.5rem;
+    font-family: inherit;
+    font-size: 1.2rem;
+    display: flex;
+    font-weight: 500;
+    text-align: center;
+    color: #fff;
+    width: fit-content;
+    background: #006aff;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    p{
+      display: flex;
+      align-items: center;
+    }
+        img{
+          background-color: white;
+          width: 50px;
+          margin: 3px;
+          margin-left: 5px;
+        }
       }
     }
 
