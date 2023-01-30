@@ -12,37 +12,54 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="./css/home.min.css">
     
     <!-- Style -->
     <link rel="stylesheet" href="css/style.min.css">
 
-    <title>Sidebar #3</title>
+    <title>Quiz</title>
   </head>
   <body>
   
-    <!-- navbar -->
-    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
-        </ul>
+    <!-- Header -->
+    <header class="header">
+      <div class="nav-container">
+          <nav class="nav">
+          <div class="nav-logo">
+              <a href="index.html" class="nav-logo__link" title="logo">Quiz-A-Preneur | EDC</a>
+          </div>
+          <div class="nav-menu">
+              <ul class="nav-menu__item">
+              <li><a href="./home.html" class="nav-menu__link">Home</a></li>
+              <li><a href="#" class="nav-menu__link">About</a></li>
+              <li><a href="./questions.html" class="nav-menu__link">Quiz</a></li>
+              <li><a href="./loginPage.html" class="nav-menu__link">Login</a></li>
+              </ul>
+          </div>
+          </nav>
+          
       </div>
-    </nav> -->
+  </header>
+
+  <!-- modal warning -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Warning</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          warning
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Go back</button>
+          <button type="button" class="btn btn-primary">Continue</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <!-- sidebar -->
     <aside class="sidebar">
@@ -56,6 +73,7 @@
           <div class="row justify-content-evenly">
             <div class="col-sm-3 col-3">
               <div class="block d-flex align-items-center justify-content-center">1</div>
+              <div class="overlay"></div>
             </div>
             <div class="col-sm-3 col-3">
               <div class="block d-flex align-items-center justify-content-center attempted">2</div>
@@ -91,7 +109,7 @@
               <div class="d-flex">
                 <div class="score">+20 points</div>
                 <div class="hint d-flex justify-content-end">
-                  <img type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" src="./assets/hint.png" alt="">
+                  <img type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" src="" alt="">
                 </div>
               </div>
 
