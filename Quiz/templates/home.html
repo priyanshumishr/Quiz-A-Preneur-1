@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+{% load static %}
+{% load socialaccount %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz-A-Preneur</title>
+    <link rel="stylesheet" href="{% static 'css/home.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/countdown.css'%}">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+    <div class="container">
+        <nav class="nav">
+        <div class="nav-logo">
+            <a href="index.html" class="nav-logo__link" title="logo">Quiz-A-Preneur | EDC</a>
+        </div>
+        <div class="nav-menu">
+            <ul class="nav-menu__item">
+            <li><a href="#" class="nav-menu__link">Home</a></li>
+            <li><a href="#" class="nav-menu__link">About</a></li>
+            <li><a href="./questions.html" class="nav-menu__link">Quiz</a></li>
+
+            {% if user.is_authenticated %}
+            <li><a href="loginPage.html" class="nav-menu__link">Profile</a></li>
+            {% else %}
+            <li><a href="profile.html" class="nav-menu__link">Login</a></li>
+            {% endif %}
+            </ul>
+        </div>
+        </nav>
+        <div class="hero">
+            
+            <div class="hero-text">
+
+            <!-- Countdown -->
+            <!-- <div id="countdown">
+                <div id='tiles'></div>
+                <div class="labels">
+                  <li>Days</li>
+                  <li>Hours</li>
+                  <li>Mins</li>
+                  <li>Secs</li>
+                </div>
+              </div> -->
+            <!--  -->
+
+            <h1 class="hero-text__main">Lorem ipsum dolor sit amet consectetur.</h1>
+            <p class="hero-text__subs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ex laborum tempora eaque perspiciatis expedita maxime asperiores corrupti odio perferendis.</p>
+            <a class="hero-text__btn" href="{% provider_login_url 'google' %}">
+                
+                 
+                </p>
+                
+                <p href="{% provider_login_url 'google' %}"}>
+                    Login with google
+                </p>
+
+                <img src="{% static 'assets/google.png'%}" alt="">
+               
+            </a>
+        </div>
+        <div class="hero-image">
+            <img class="hero-image__main" src="{% static 'assets/Artboard 1.png'%}" alt="Images">
+        </div>
+        </div>
+    </div>
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+    <section class="about">
+        <div class="container">
+        <div class="about-image">
+            <img class="about-image__main" src="https://bit.ly/2D7MxjT" alt="Images">
+        </div>
+        <div class="about-text">
+            <h1 class="about-text__main">Adipisicing elit Voluptatibus consectetur incidunt tempore.</h1>
+            <p class="about-text__subs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, distinctio ullam? Magnam non ex dolor earum quae sit, quod error, amet quasi vel, animi alias?</p>
+        </div>
+        </div>
+    </section>
+    <section class="service">
+        <div class="container">
+        <div class="card card-1">
+            <div class="card-image">
+            <img src="https://bit.ly/37hmX9N" alt="Images">
+            </div>
+            <div class="card-text">
+            <h2 class="card-text__title">Adipisicing elit</h2>
+            <p class="card-text__subs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, quaerat?
+            </p>
+            </div>
+        </div>
+        <div class="card card-2">
+            <div class="card-image">
+            <img src="https://bit.ly/2Xx6MAH" alt="Images">
+            </div>
+            <div class="card-text">
+            <h2 class="card-text__title">Dolores distinctio</h2>
+            <p class="card-text__subs">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam, ad!</p>
+            </div>
+        </div>
+        <div class="card card-3">
+            <div class="card-image">
+            <img src="https://bit.ly/2O0Ftf9" alt="Images">
+            </div>
+            <div class="card-text">
+            <h2 class="card-text__title">incidunt tempore</h2>
+            <p class="card-text__subs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, praesentium?
+            </p>
+            </div>
+        </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-menu">
+        <ul class="footer-menu__item">
+            <li><a href="#" class="footer-menu__link">Home</a></li>
+            <li><a href="#" class="footer-menu__link">About</a></li>
+            <li><a href="#" class="footer-menu__link">Service</a></li>
+            <li><a href="#" class="footer-menu__link">Contact</a></li>
+        </ul>
+        </div>
+        <div class="footer-copy">
+        <p>&copy; Copyright 2023 - All Right Reserved</p>
+        </div>
+    </div>
+    </footer>
+
+    <script src="{% static 'JS/home.js'%}"></script>
+    <script src="{% static 'JS/countdown.js'%}"></script>
+</body>
+</html>
