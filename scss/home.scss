@@ -46,6 +46,9 @@ body {
     background-position: center;
     color: $color-white;
   .nav {
+    background-image: url("../assets/chalk-navbar.png");
+    background-color: transparent;
+    background-size: 100% 100%;
     display: flex;
     flex-direction: row;
     flex: 1;
@@ -215,10 +218,13 @@ body {
 
     .card {
       padding: 2rem;
-      background: $color-white;
-      color: $color-dark;
-      border-radius: 2px;
-      box-shadow: $box-shadow-1;
+      // background: $color-white;
+      color: $color-white;
+      // border-radius: 2px;
+      // box-shadow: $box-shadow-1;
+      background-image: url("../assets/chalk-card.png");
+			background-color: transparent;
+			background-size: 100% 100%;
 
       &-image {
         display: flex;
