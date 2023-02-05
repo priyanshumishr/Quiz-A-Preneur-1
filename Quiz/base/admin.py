@@ -2,9 +2,11 @@ from django.contrib import admin
 
 # Register your models here.
 
-from .models import registration_detail
-admin.site.register(registration_detail)
+from .models import Student,Questions,Answer
+admin.site.register(Student)
 
+admin.site.register(Questions)
+admin.site.register(Answer)
 
 
 

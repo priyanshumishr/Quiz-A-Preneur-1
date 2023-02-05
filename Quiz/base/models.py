@@ -1,7 +1,8 @@
 from django.db import models
-from django.contrib.auth import get_user_model
 
-User= get_user_model
+from django.contrib.auth.models import User
+
+# User= get_user_model
 
 DIFF_CHOICES =(
     ('easy','easy'),
@@ -18,13 +19,61 @@ QUESTION_TYPE =(
     
 )
 
-class registration_detail(models.Model):
-    name = models.CharField(max_length=255)
-    School = models.CharField(max_length=255,blank=False)
-    standard = models.PositiveIntegerField()
-    city_of_residence = models.CharField(max_length=255,blank=False)
+class Student(models.Model):
+    user = models.OneToOneField(User, null =True,on_delete=models.CASCADE)
+    name = models.CharField(max_length=255,null=True)
+    school = models.CharField(max_length=255,null=True)
+    standard = models.PositiveIntegerField(null=True)
+    # city_of_residence = models.CharField(max_length=255,blank=False)
     phone_number=models.PositiveIntegerField(null=True)
-    mail_address=models.EmailField(max_length=255, default=False)
+
+
+
+
+
+class Questions(models.Model):
     
-    def __str__(self):
-        return self.name.username
+
+    
+    # question = models.CharField(max_length=255)
+    difficulty = models.CharField(max_length=6, choices=DIFF_CHOICES)
+    question_type= models.CharField(max_length=20,choices=QUESTION_TYPE,default='single' )
+
+
+
+
+    def _str_(self):
+         return str(self.question)
+
+
+    def get_answers(self):
+            return self.answer_set.all()
+
+class Answer(models.Model):
+    text=models.CharField(max_length=255)
+    correct=models.BooleanField(default=False)
+    question=models.ForeignKey(Questions, on_delete=models.CASCADE)
+
+
+    def _str_(self):
+        return f"question: {self.question.question}, Answer:{self.text}, correct:{self.correct}"
+
+    
+    
+    
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+        

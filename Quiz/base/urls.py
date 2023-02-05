@@ -10,5 +10,6 @@ urlpatterns=[
     path('',views.home),
     path('register', views.register)
     
+    
 
 ]
